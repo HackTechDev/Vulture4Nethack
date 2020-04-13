@@ -72,7 +72,7 @@ all: $(OUTPUT_OBJ)
 
 $(OUTPUT_OBJ): $(VOBJ)
 	@echo combining objects to $@
-	@$(CXX) -nostdlib -Xlinker -r $(VOBJ) -lstdc++ -o $(OUTPUT_OBJ)
+	@$(CXX) -no-pie -nostdlib -Xlinker -r $(VOBJ) -lstdc++ -o $(OUTPUT_OBJ)
 
 $(BUILDDIR)/vulture_tileconfig.parser.cpp $(BUILDDIR)/vulture_tileconfig.parser.h: vulture_tileconfig.parser.y
 	@echo generating parser
