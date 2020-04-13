@@ -447,8 +447,8 @@ fillholetyp(x,y)
 int x, y;
 {
     register int x1, y1;
-    int lo_x = max(1,x-1), hi_x = min(x+1,COLNO-1),
-	lo_y = max(0,y-1), hi_y = min(y+1,ROWNO-1);
+    int lo_x = MAX(1,x-1), hi_x = MIN(x+1,COLNO-1),
+	lo_y = MAX(0,y-1), hi_y = MIN(y+1,ROWNO-1);
     int pool_cnt = 0, moat_cnt = 0, lava_cnt = 0;
 
     for (x1 = lo_x; x1 <= hi_x; x1++)
